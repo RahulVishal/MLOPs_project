@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pricing Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Dynamic Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="number_of_riders">Number of Riders:</label><br>
+        <input type="text" id="number_of_riders" name="number_of_riders" required><br>
+    
+        <label for="number_of_drivers">Number of Drivers:</label><br>
+        <input type="text" id="number_of_drivers" name="number_of_drivers" required><br>
+    
+        <label for="vehicle_type">Vehicle Type (encoded):</label><br>
+        <input type="text" id="vehicle_type" name="vehicle_type" required><br>
+    
+        <label for="expected_ride_duration">Expected Ride Duration (minutes):</label><br>
+        <input type="text" id="expected_ride_duration" name="expected_ride_duration" required><br>
+    
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
