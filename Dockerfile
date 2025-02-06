@@ -1,24 +1,25 @@
-# Use a base image
-FROM python:3.12.3
+# Use a base Python image
+FROM python:3.12.3-slim
 
-RUN pip install virtualenv
-ENV VIRTUAL_ENV=/venv
-RUN virtualenv venv -p python3
-ENV PATH="VIRTUAL_ENV/bin:$PATH"
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
 # Set the working directory
 WORKDIR /app
 
-# Copy requirements.txt and install dependencies
-COPY requirements.txt .
-
 # Install dependencies
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application
+# Install gunicorn (WSGI server for production)
+RUN pip install gunicorn
+
+# Copy the application files
 COPY . .
 
-# Expose the port your app runs on
-EXPOSE 5000
+# Expose the port Flask will run on
+EXPOSE 5001
 
-# Command to run the Flask app in production mode
-CMD ["python", "app2.py", "--host=0.0.0.0", "--port=5000"]
+# Command to run the application using gunicorn
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5001", "app2:app"]
