@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: dyna-pricing
+    name: dynamic-pricing
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
@@ -9,4 +9,4 @@ services:
       - key: PYTHONUNBUFFERED
         value: "1"
       - key: PORT
-        value: "8501"
+        value: "5000"
