@@ -13,6 +13,7 @@
             background: linear-gradient(to bottom, #3a6186, #89253e);
             color: #fff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -31,6 +32,7 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 400px;
+            margin-bottom: 20px;
         }
 
         label {
@@ -100,6 +102,10 @@
         <input type="text" id="expected_ride_duration" name="expected_ride_duration" placeholder="Enter expected ride duration" required>
 
         <button type="submit">Predict</button>
+    </form>
+    
+    <form action="/graph" method="get">
+        <button type="submit">Show Graph</button>
     </form>
 
     <script>
