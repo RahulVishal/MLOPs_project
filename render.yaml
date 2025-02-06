@@ -1,9 +1,12 @@
 services:
   - type: web
-    name: my-python-app
+    name: dyna-pricing
     env: docker
-    plan: free  # Change this to 'starter' or 'standard' if needed
+    plan: free
     dockerfilePath: ./Dockerfile
+    autoDeploy: true
     envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
       - key: PORT
-        value: 5000
+        value: "8501"
