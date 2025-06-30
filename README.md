@@ -24,7 +24,7 @@ Dynamic pricing allows ride-sharing platforms to dynamically adjust ride costs b
 
 ## System Architecture
 
-![System Architecture](images/devops_pipeline.png)
+![System Architecture](images/devops_pipeline.jpeg)
 
 1. **Data Ingestion**: Historical ride data ingested and stored in AWS S3.
 2. **Preprocessing**: Normalization, missing value imputation, outlier handling.
