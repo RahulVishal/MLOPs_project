@@ -67,8 +67,8 @@ python app.py
 - Enter details: number of riders, drivers, vehicle type, expected duration
 - Click **Predict** to see the estimated dynamic price
 
-![Homepage](images/homepage.png)
-![Result Page](images/result.png)
+![Homepage](images/home.jpeg)
+![Result Page](images/result.jpeg)
 
 ---
 
@@ -106,7 +106,7 @@ MLOPs_project/
   - Expected_Ride_Duration
 - Demand and supply multipliers added to input features.
 
-![Model Accuracy](images/accuracy_plot.png)
+![Model Accuracy](images/accuracy.jpeg)
 
 ---
 
@@ -129,6 +129,3 @@ This system combines the predictive power of ML with scalable DevOps principles 
 
 ---
 
-## References
-
-Full list of academic and technical references provided in the [report](./SkillLab_Report_AI045_AI040.docx).
